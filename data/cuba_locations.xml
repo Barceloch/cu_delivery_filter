@@ -1,0 +1,763 @@
+<odoo>
+    <!-- País Cuba -->
+    <record id="base.cu" model="res.country">
+        <field name="name">Cuba</field>
+        <field name="code">CU</field>
+    </record>
+
+    <!-- Provincias de Cuba -->
+    <record id="province_pinar_del_rio" model="res.country.state">
+        <field name="name">Pinar del Río</field>
+        <field name="code">PRI</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_artemisa" model="res.country.state">
+        <field name="name">Artemisa</field>
+        <field name="code">ART</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_habana" model="res.country.state">
+        <field name="name">La Habana</field>
+        <field name="code">HAB</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_mayabeque" model="res.country.state">
+        <field name="name">Mayabeque</field>
+        <field name="code">MAY</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_matanzas" model="res.country.state">
+        <field name="name">Matanzas</field>
+        <field name="code">MAT</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_cienfuegos" model="res.country.state">
+        <field name="name">Cienfuegos</field>
+        <field name="code">CFG</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_villa_clara" model="res.country.state">
+        <field name="name">Villa Clara</field>
+        <field name="code">VCL</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_sancti_spiritus" model="res.country.state">
+        <field name="name">Sancti Spíritus</field>
+        <field name="code">SSP</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_ciego_de_avila" model="res.country.state">
+        <field name="name">Ciego de Ávila</field>
+        <field name="code">CAV</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_camaguey" model="res.country.state">
+        <field name="name">Camagüey</field>
+        <field name="code">CMG</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_las_tunas" model="res.country.state">
+        <field name="name">Las Tunas</field>
+        <field name="code">LTU</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_holguin" model="res.country.state">
+        <field name="name">Holguín</field>
+        <field name="code">HOL</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_granma" model="res.country.state">
+        <field name="name">Granma</field>
+        <field name="code">GRA</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_santiago_de_cuba" model="res.country.state">
+        <field name="name">Santiago de Cuba</field>
+        <field name="code">SCU</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_guantanamo" model="res.country.state">
+        <field name="name">Guantánamo</field>
+        <field name="code">GTM</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+    <record id="province_isla_de_la_juventud" model="res.country.state">
+        <field name="name">Isla de la Juventud</field>
+        <field name="code">IJV</field>
+        <field name="country_id" ref="base.cu"/>
+    </record>
+
+    <!-- Isla de la Juventud -->
+    <record id="municipality_isla_de_la_juventud" model="res.country.municipality">
+        <field name="name">Isla de la Juventud</field>
+        <field name="state_id" ref="province_isla_de_la_juventud"/>
+    </record>
+
+    <!-- Municipios de Pinar del Río -->
+    <record id="municipality_pinar_del_rio" model="res.country.municipality">
+        <field name="name">Pinar del Río</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_sandino" model="res.country.municipality">
+        <field name="name">Sandino</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_mantua" model="res.country.municipality">
+        <field name="name">Mantua</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_minas_de_matahambre" model="res.country.municipality">
+        <field name="name">Minas de Matahambre</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_vinales" model="res.country.municipality">
+        <field name="name">Viñales</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_la_palma" model="res.country.municipality">
+        <field name="name">La Palma</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_los_palacios" model="res.country.municipality">
+        <field name="name">Los Palacios</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_consolacion_del_sur" model="res.country.municipality">
+        <field name="name">Consolación del Sur</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_puerto_esperanza" model="res.country.municipality">
+        <field name="name">Puerto Esperanza</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_guane" model="res.country.municipality">
+        <field name="name">Guane</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_san_luis" model="res.country.municipality">
+        <field name="name">San Luis</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_san_juan_y_martinez" model="res.country.municipality">
+        <field name="name">San Juan y Martínez</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+    <record id="municipality_puerto_acometa" model="res.country.municipality">
+        <field name="name">Puerto Acometa</field>
+        <field name="state_id" ref="province_pinar_del_rio"/>
+    </record>
+
+    <!-- Municipios de Artemisa -->
+    <record id="municipality_artemisa" model="res.country.municipality">
+        <field name="name">Artemisa</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_bahia_honda" model="res.country.municipality">
+        <field name="name">Bahía Honda</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_bauta" model="res.country.municipality">
+        <field name="name">Bauta</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_caimito" model="res.country.municipality">
+        <field name="name">Caimito</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_candelaria" model="res.country.municipality">
+        <field name="name">Candelaria</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_guanajay" model="res.country.municipality">
+        <field name="name">Guanajay</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_marroquin" model="res.country.municipality">
+        <field name="name">Marroquín</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_san_antonio_de_los_banos" model="res.country.municipality">
+        <field name="name">San Antonio de los Baños</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_san_cristobal" model="res.country.municipality">
+        <field name="name">San Cristóbal</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_guira_de_melena" model="res.country.municipality">
+        <field name="name">Güira de Melena</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+    <record id="municipality_alquizar" model="res.country.municipality">
+        <field name="name">Alquízar</field>
+        <field name="state_id" ref="province_artemisa"/>
+    </record>
+
+    <!-- Municipios de La Habana -->
+    <record id="municipality_cerro" model="res.country.municipality">
+        <field name="name">Cerro</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_habana_vieja" model="res.country.municipality">
+        <field name="name">Habana Vieja</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_centro_habana" model="res.country.municipality">
+        <field name="name">Centro Habana</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_dieze_de_octubre" model="res.country.municipality">
+        <field name="name">Diez de Octubre</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_playa" model="res.country.municipality">
+        <field name="name">Playa</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_plaza_de_la_revolucion" model="res.country.municipality">
+        <field name="name">Plaza de la Revolución</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_habana_del_este" model="res.country.municipality">
+        <field name="name">Habana del Este</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_boyeros" model="res.country.municipality">
+        <field name="name">Boyeros</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_san_miguel_del_padron" model="res.country.municipality">
+        <field name="name">San Miguel del Padrón</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_guanabacoa" model="res.country.municipality">
+        <field name="name">Guanabacoa</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_cotorro" model="res.country.municipality">
+        <field name="name">Cotorro</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_regla" model="res.country.municipality">
+        <field name="name">Regla</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+    <record id="municipality_arroyo_naranjo" model="res.country.municipality">
+        <field name="name">Arroyo Naranjo</field>
+        <field name="state_id" ref="province_habana"/>
+    </record>
+
+    <!-- Municipios de Mayabeque -->
+    <record id="municipality_batabano" model="res.country.municipality">
+        <field name="name">Batabanó</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_bejucal" model="res.country.municipality">
+        <field name="name">Bejucal</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_guaimaro" model="res.country.municipality">
+        <field name="name">Güaimaro</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_güines" model="res.country.municipality">
+        <field name="name">Güines</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_jaruco" model="res.country.municipality">
+        <field name="name">Jaruco</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_madruga" model="res.country.municipality">
+        <field name="name">Madruga</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_melena_del_sur" model="res.country.municipality">
+        <field name="name">Melena del Sur</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_nueva_paz" model="res.country.municipality">
+        <field name="name">Nueva Paz</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_quivican" model="res.country.municipality">
+        <field name="name">Quivicán</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_san_jose_de_las_lajas" model="res.country.municipality">
+        <field name="name">San José de las Lajas</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_santa_cruz_del_norte" model="res.country.municipality">
+        <field name="name">Santa Cruz del Norte</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+    <record id="municipality_jaruco" model="res.country.municipality">
+        <field name="name">San Nicolás de Bari</field>
+        <field name="state_id" ref="province_mayabeque"/>
+    </record>
+
+    <!-- Municipios de Matanzas -->
+    <record id="municipality_cardenas" model="res.country.municipality">
+        <field name="name">Cárdenas</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_ciudad_de_matanzas" model="res.country.municipality">
+        <field name="name">Ciudad de Matanzas</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_colon" model="res.country.municipality">
+        <field name="name">Colón</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_jaguey_grande" model="res.country.municipality">
+        <field name="name">Jagüey Grande</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_jovellanos" model="res.country.municipality">
+        <field name="name">Jovellanos</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_limonar" model="res.country.municipality">
+        <field name="name">Limonar</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_martí" model="res.country.municipality">
+        <field name="name">Martí</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_perico" model="res.country.municipality">
+        <field name="name">Perico</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_cienaga_de_zapata" model="res.country.municipality">
+        <field name="name">Ciénaga de Zapata</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_union_de_reyes" model="res.country.municipality">
+        <field name="name">Unión de Reyes</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_cárdenas" model="res.country.municipality">
+        <field name="name">Pedro Betancourt</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_maximo_gomez" model="res.country.municipality">
+        <field name="name">Máximo Gómez</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_calimete" model="res.country.municipality">
+        <field name="name">Calimete</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+    <record id="municipality_aguada_de_paso" model="res.country.municipality">
+        <field name="name">Aguada de Pasajeros</field>
+        <field name="state_id" ref="province_matanzas"/>
+    </record>
+
+     <!-- Municipios de Cienfuegos -->
+    <record id="municipality_aguaiva" model="res.country.municipality">
+        <field name="name">Aguada de Pasajeros</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_cienfuegos" model="res.country.municipality">
+        <field name="name">Cienfuegos</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_cumanayagua" model="res.country.municipality">
+        <field name="name">Cumanayagua</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_lajas" model="res.country.municipality">
+        <field name="name">Lajas</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_palmira" model="res.country.municipality">
+        <field name="name">Palmira</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_rodas" model="res.country.municipality">
+        <field name="name">Rodas</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_santa_isabel_de_las_lajas" model="res.country.municipality">
+        <field name="name">Santa Isabel de las Lajas</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+    <record id="municipality_cruce_de_dos_camino" model="res.country.municipality">
+        <field name="name">Cruces</field>
+        <field name="state_id" ref="province_cienfuegos"/>
+    </record>
+
+    <!-- Municipios de Villa Clara -->
+    <record id="municipality_caibarien" model="res.country.municipality">
+        <field name="name">Caibarién</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_camaguaní" model="res.country.municipality">
+        <field name="name">Camajuaní</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_cifuentes" model="res.country.municipality">
+        <field name="name">Cifuentes</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_corralillo" model="res.country.municipality">
+        <field name="name">Corralillo</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_encrucijada" model="res.country.municipality">
+        <field name="name">Encrucijada</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_manicaragua" model="res.country.municipality">
+        <field name="name">Manicaragua</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_placetas" model="res.country.municipality">
+        <field name="name">Placetas</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_quemado_de_güines" model="res.country.municipality">
+        <field name="name">Quemado de Güines</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_remedios" model="res.country.municipality">
+        <field name="name">Remedios</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_sagua_la_grande" model="res.country.municipality">
+        <field name="name">Sagua la Grande</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_santo_domingo" model="res.country.municipality">
+        <field name="name">Santo Domingo</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+    <record id="municipality_santa_clara" model="res.country.municipality">
+        <field name="name">Santa Clara</field>
+        <field name="state_id" ref="province_villa_clara"/>
+    </record>
+
+    <!-- Municipios de Sancti Spíritus -->
+    <record id="municipality_cabaiguan" model="res.country.municipality">
+        <field name="name">Cabaiguán</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_fomento" model="res.country.municipality">
+        <field name="name">Fomento</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_jatibonico" model="res.country.municipality">
+        <field name="name">Jatibonico</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_la_sierpe" model="res.country.municipality">
+        <field name="name">La Sierpe</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_taguasco" model="res.country.municipality">
+        <field name="name">Taguasco</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_trinidad" model="res.country.municipality">
+        <field name="name">Trinidad</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_yaguajay" model="res.country.municipality">
+        <field name="name">Yaguajay</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+    <record id="municipality_sancti_spiritus" model="res.country.municipality">
+        <field name="name">Sancti Spíritus</field>
+        <field name="state_id" ref="province_sancti_spiritus"/>
+    </record>
+
+    <!-- Municipios de Ciego de Ávila -->
+    <record id="municipality_bolivia" model="res.country.municipality">
+        <field name="name">Bolivia</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_ciego_de_avila" model="res.country.municipality">
+        <field name="name">Ciego de Ávila</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_chambas" model="res.country.municipality">
+        <field name="name">Chambas</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_ciro_redondo" model="res.country.municipality">
+        <field name="name">Ciro Redondo</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_florencia" model="res.country.municipality">
+        <field name="name">Florencia</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_majariguilla" model="res.country.municipality">
+        <field name="name">Majagua</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_moron" model="res.country.municipality">
+        <field name="name">Morón</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_primero_de_enero" model="res.country.municipality">
+        <field name="name">Primero de Enero</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+    <record id="municipality_violeta" model="res.country.municipality">
+        <field name="name">Violeta</field>
+        <field name="state_id" ref="province_ciego_de_avila"/>
+    </record>
+
+   <!-- Municipios de Camaguey -->
+    <record id="municipality_camaguey" model="res.country.municipality">
+        <field name="name">Camagüey</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_florida" model="res.country.municipality">
+        <field name="name">Florida</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_guaimaro" model="res.country.municipality">
+        <field name="name">Guaimaro</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_jimaguayu" model="res.country.municipality">
+        <field name="name">Jimaguayú</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_minas" model="res.country.municipality">
+        <field name="name">Minas</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_nuevitas" model="res.country.municipality">
+        <field name="name">Nuevitas</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_sierra_de_cubitas" model="res.country.municipality">
+        <field name="name">Sierra de Cubitas</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_vertientes" model="res.country.municipality">
+        <field name="name">Vertientes</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+    <record id="municipality_santa_cruz_del_sur" model="res.country.municipality">
+        <field name="name">Santa Cruz del Sur</field>
+        <field name="state_id" ref="province_camaguey"/>
+    </record>
+
+    <!-- Municipios de Las Tunas -->
+    <record id="municipality_las_tunas" model="res.country.municipality">
+        <field name="name">Las Tunas</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_amancio" model="res.country.municipality">
+        <field name="name">Amancio</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_colombia" model="res.country.municipality">
+        <field name="name">Colombia</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_manati" model="res.country.municipality">
+        <field name="name">Manatí</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_majibacoa" model="res.country.municipality">
+        <field name="name">Majibacoa</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_jesus_menendez" model="res.country.municipality">
+        <field name="name">Jesús Menéndez</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_puerto_padre" model="res.country.municipality">
+        <field name="name">Puerto Padre</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+    <record id="municipality_jobabo" model="res.country.municipality">
+        <field name="name">Jobabo</field>
+        <field name="state_id" ref="province_las_tunas"/>
+    </record>
+
+
+    <!-- Municipios de Holguín -->
+    <record id="municipality_holguin" model="res.country.municipality">
+        <field name="name">Holguín</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_gibara" model="res.country.municipality">
+        <field name="name">Gibara</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_banes" model="res.country.municipality">
+        <field name="name">Banes</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_cueto" model="res.country.municipality">
+        <field name="name">Cueto</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_rafael_freyre" model="res.country.municipality">
+        <field name="name">Rafael Freyre</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_antilla" model="res.country.municipality">
+        <field name="name">Antilla</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_baguano" model="res.country.municipality">
+        <field name="name">Báguano</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_moa" model="res.country.municipality">
+        <field name="name">Moa</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_mayari" model="res.country.municipality">
+        <field name="name">Mayarí</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_sagua_de_tanamo" model="res.country.municipality">
+        <field name="name">Sagua de Tánamo</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_cacocum" model="res.country.municipality">
+        <field name="name">Cacocum</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_urbano_noris" model="res.country.municipality">
+        <field name="name">Urbano Noris</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+    <record id="municipality_frank_pais" model="res.country.municipality">
+        <field name="name">Frank País</field>
+        <field name="state_id" ref="province_holguin"/>
+    </record>
+
+    <!-- Municipios de Granma -->
+     <record id="municipality_bayamo" model="res.country.municipality">
+        <field name="name">Bayamo</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_manzanillo" model="res.country.municipality">
+        <field name="name">Manzanillo</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_yara" model="res.country.municipality">
+        <field name="name">Yara</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_campechuela" model="res.country.municipality">
+        <field name="name">Campechuela</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_niquero" model="res.country.municipality">
+        <field name="name">Niquero</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_pilon" model="res.country.municipality">
+        <field name="name">Pilón</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_media_luna" model="res.country.municipality">
+        <field name="name">Media Luna</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_jiguani" model="res.country.municipality">
+        <field name="name">Jiguaní</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_rio_cauto" model="res.country.municipality">
+        <field name="name">Río Cauto</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_cauto_cristo" model="res.country.municipality">
+        <field name="name">Cauto Cristo</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_guisa" model="res.country.municipality">
+        <field name="name">Guisa</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_bartolome_maso" model="res.country.municipality">
+        <field name="name">Bartolomé Masó</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+    <record id="municipality_buey_arriba" model="res.country.municipality">
+        <field name="name">Buey Arriba</field>
+        <field name="state_id" ref="province_granma"/>
+    </record>
+
+    <!-- Municipios de Santiago de Cuba -->
+    <record id="municipality_santiago_de_cuba" model="res.country.municipality">
+        <field name="name">Santiago de Cuba</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_contrado" model="res.country.municipality">
+        <field name="name">Contramaestre</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_palma_soriano" model="res.country.municipality">
+        <field name="name">Palma Soriano</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_songo_la_maya" model="res.country.municipality">
+        <field name="name">Songo-La Maya</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_san_luis" model="res.country.municipality">
+        <field name="name">San Luis</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_mella" model="res.country.municipality">
+        <field name="name">Mella</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_ii_frente" model="res.country.municipality">
+        <field name="name">Segundo Frente</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+    <record id="municipality_iii_frente" model="res.country.municipality">
+        <field name="name">Tercer Frente</field>
+        <field name="state_id" ref="province_santiago_de_cuba"/>
+    </record>
+
+    <!-- Municipios Guantánamo -->
+    <record id="municipality_guantanamo" model="res.country.municipality">
+        <field name="name">Guantánamo</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_barroco" model="res.country.municipality">
+        <field name="name">Baracoa</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_caimanera" model="res.country.municipality">
+        <field name="name">Caimanera</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_maisi" model="res.country.municipality">
+        <field name="name">Maisí</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_imias" model="res.country.municipality">
+        <field name="name">Imías</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_san_antonio_del_sur" model="res.country.municipality">
+        <field name="name">San Antonio del Sur</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+    <record id="municipality_yateras" model="res.country.municipality">
+        <field name="name">Yateras</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+
+    <record id="municipality_el_salvador" model="res.country.municipality">
+        <field name="name">El Salvador</field>
+        <field name="state_id" ref="province_guantanamo"/>
+    </record>
+</odoo>

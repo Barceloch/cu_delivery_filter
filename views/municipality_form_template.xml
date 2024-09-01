@@ -1,0 +1,34 @@
+<odoo>
+    <!-- Definir la vista del formulario para los municipios -->
+    <record id="view_municipality_form" model="ir.ui.view">
+        <field name="name">res.country.municipality.form</field>
+        <field name="model">res.country.municipality</field>
+        <field name="arch" type="xml">
+            <form string="Municipality">
+                <sheet>
+                    <group>
+                        <!-- Campo para seleccionar un municipio existente -->
+                        <field name="state_id" placeholder="Seleccionar Provincia"/>
+                        <field name="name" placeholder="Nombre del municipio"/>                        
+                        <!-- Campo para ingresar el código postal -->
+                        <field name="postal_code" placeholder="Ingrese el código postal"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Crear la acción para el menú -->
+    <record id="action_res_country_municipality" model="ir.actions.act_window">
+        <field name="name">Municipalities</field>
+        <field name="res_model">res.country.municipality</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Crear el menú para acceder a la acción en "Configuración de Sitio Web" -->
+    <menuitem id="submenu_res_country_municipality"
+              name="Municipios"
+              parent="website.menu_website_global_configuration"  
+              action="action_res_country_municipality"
+              sequence="10"/>
+</odoo>

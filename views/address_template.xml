@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <template id="address_management_inherit" inherit_id="website_sale.address">
+            
+            <xpath expr="//form[@action='/shop/address']" position="inside">
+                <style>
+                    .div_zip {
+                        display: none !important;
+                    }
+                </style>
+            </xpath>
+
+            <xpath expr="//input[@name='field_required']" position="attributes">
+                <attribute name="t-att-value">'name,street,phone,email'</attribute>
+            </xpath>
+                       
+        </template>
+    </data>
+</odoo>
+
+

@@ -1,0 +1,65 @@
+<odoo>
+    <!-- Plantilla del Modal de Selección de Entrega -->
+    <template id="delivery_filter_modal" name="Delivery Filter Modal">
+        <div class="modal fade" id="deliveryModal" tabindex="-1" role="dialog" aria-labelledby="deliveryModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="/set_delivery_address" method="post" id="deliveryForm">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deliveryModalLabel">Seleccione su municipio</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="province">Provincia</label>
+                                <select id="province" name="province_id" class="form-control">
+                                    <option value="">Seleccionar provincia</option>
+                                    <t t-foreach="request.env['res.country.state'].search([('country_id', '=', 51)])" t-as="province">
+                                        <!-- <option t-att-value="province.id"> -->
+                                        <option t-att-value="province.id" t-att-data-code="province.code">
+                                            <t t-esc="province.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="municipality">Municipio</label>
+                                <select id="municipality" name="municipality_id" class="form-control">
+                                    <option value="">Seleccione un municipio</option>
+                                    <!-- Los municipios se llenarán mediante JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Aceptar</button>
+                            <button type="button" id="cancelModalButton" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Modificación del Header para incluir el Modal -->
+    <template id="header_inherit" inherit_id="website.layout">
+        
+        <xpath expr="//ul[@class='navbar-nav align-items-center gap-2 flex-shrink-0 justify-content-end ps-3']" position="inside">
+            <t t-if="request.env.user.id">
+                <!-- Incluir el modal solo si no se ha seleccionado un municipio
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="deliveryAddress">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span id="deliveryText">Seleccionar dirección</span>
+                    </a>
+                </li>
+
+            </t>
+        </xpath>
+        Modal para selección de dirección
+        <xpath expr="//body" position="inside">
+            <t t-call="cu_delivery_filter.delivery_filter_modal"/>
+        </xpath>
+        
+        
+    </template>
+</odoo>

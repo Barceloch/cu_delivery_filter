@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+      <record id="view_product_template_form_inherit" model="ir.ui.view">
+          <field name="name">product.template.form.delivery.municipality</field>
+          <field name="model">product.template</field>
+          <field name="inherit_id" ref="product.product_template_form_view"/>
+          <field name="arch" type="xml">
+              <xpath expr="//page[@name='general_information']" position="inside">
+                  <group string="Direcciones de Entrega">       
+                    <field name="delivery_municipality_ids" widget="many2many_tags"/>
+                    <field name="delivery_municipality_display" readonly="1"/>
+                  </group>
+              </xpath>
+          </field>
+      </record>
+  </data>
+</odoo>

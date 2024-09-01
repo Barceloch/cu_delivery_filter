@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <template id="custom_product_item_inherit" inherit_id="website_sale.products_item">
+            <!-- Obtener el municipality_id de la sesión o del partner -->
+            <xpath expr="//div[@class='o_wsale_product_btn']" position="before">
+                <t t-set="session_municipality_id" t-value="request.session.get('municipality_id') or False"/>
+                <t t-set="partner" t-value="request.env.user.partner_id"/>
+
+                <!-- Verificar si el municipio de la sesión está disponible -->
+                <t t-if="not session_municipality_id and partner and partner.city">
+                    <t t-set="municipality" t-value="request.env['res.country.municipality'].search([('name', '=', partner.city)], limit=1)"/>
+                    <t t-if="municipality">
+                        <t t-set="session_municipality_id" t-value="municipality.id"/>
+                    </t>
+                </t>
+
+                <!-- Verificar si el producto está disponible en el municipio -->
+                <t t-set="delivery_avail" t-value="False"/>
+                <t t-if="product.delivery_municipality_ids">
+                    <t t-foreach="product.delivery_municipality_ids" t-as="municipality">
+                        <t t-if="municipality.id == session_municipality_id">
+                            <t t-set="delivery_avail" t-value="True"/>
+                        </t>
+                    </t>
+                </t>
+            </xpath>
+
+            
+            <xpath expr="//div[@class='o_wsale_product_btn']" position="attributes">
+                <attribute name="t-attf-class">o_wsale_product_btn #{'product-unavailable' if not delivery_avail else ''}</attribute>
+            </xpath>
+            <xpath expr="//div[@class='o_wsale_product_btn']" position="inside">
+                <style>
+                    .product-unavailable .a-submit {
+                        display: none;
+                    }
+                </style>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
