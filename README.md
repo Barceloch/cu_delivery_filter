@@ -10,3 +10,15 @@ Cuando el usuario va acomprr algun producto, se le mostraran los metodos de envi
 Las provincias y municipios (de Cuba),serán añadidos automaticamente a la base de datos al instalar el modulo.
 El campo de codigo postal no es requerido y esta oculto en el formulario para las direcciones de envio y facturación.
 
+#Capturas:
+![1](capturas/01.jpg)
+![2](capturas/02.jpg)
+![3](capturas/03.jpg)
+![4](capturas/04.jpg)
+![5](capturas/05.jpg)
+![6](capturas/06.jpg)
+![7](capturas/07.jpg)
+![8](capturas/08.jpg)
+![9](capturas/09.jpg)
+![10](capturas/10.jpg)
+
